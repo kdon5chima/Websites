@@ -11,12 +11,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
-
-    
-
     <!-- Bootstrap core CSS -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
 
     <style>
         body{
@@ -26,6 +22,9 @@
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            width: 100%;
+            height: 400px
+            opacity: 0.2;
         }
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -34,11 +33,31 @@
         -moz-user-select: none;
         user-select: none;
       }
+      h3{
+        position: center;
+        font-size: 36px;
+        color: blue;
+      }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+        @media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
       }
     </style>
 
@@ -55,32 +74,32 @@
       <img src="images/logo.png" alt="">
       <nav class="nav nav-masthead justify-content-center float-md-end">
       <button type="button" class="btn btn-outline-success">
-        <a class="nav-link text-danger" href="#">Unique Children School</a>
+        <a class="nav-link text-danger" href="ucs/index.php">Unique Children School</a>
       </button>
       <button type="button" class="btn btn-outline-warning">
-        <a class="nav-link text-danger" href="#">Unique Heights School</a>
+        <a class="nav-link text-danger" href="uhs/index.php">Unique Heights School</a>
       </button>
       </nav>
     </div>
   </header>
  <br /><br /><br /><br />
   <main class="px-100">
-    <h2 class="text-white">Welcome to Unique Group of Schools<h2>
+    <h2 class="text-white" style="font-size:5vw">Welcome to Unique Group of Schools<h2>
     <br /><br />
-    <center><h3 class="text-white">Site under reconstruction....<h3></center>
+    <h3 class="text-white">Site under reconstruction....<h3>
     <br /><br />
     <table>
       <tr>
         <td width="360"> 
          
         <button type="button" class="text-white bg-dark">
-            <a href="#" class="text-white text-decoration-none"><h6>Click to visit <br />Unique Children School</h6></a>
+            <a href="ucs/index.php" class="text-white text-decoration-none"><h6>Click to visit <br />Unique Children School</h6></a>
         </button>
         </td>
         <td width="100"></td>
         <td width="360">
         <button type="button" class="text-white bg-danger">
-              <a href="#" class="text-white text-decoration-none"><h6>Click to visit <br />Unique Height School</h6></a>
+              <a href="uhs/index.php" class="text-white text-decoration-none"><h6>Click to visit <br />Unique Height School</h6></a>
         </button>
         </td>
       </tr>
@@ -91,8 +110,7 @@
   </main>
   <br /><br /><br /><br />
   <footer class="mt-auto text-white-50">
-    <!-- footer -->
-    <p>Unique Group of Schools...</p>
+    <?php include "footer.php"; ?>
   </footer>
 </div>
 </body>
